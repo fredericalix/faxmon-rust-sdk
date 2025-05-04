@@ -1,0 +1,19 @@
+[package]
+name = "faxmon-sdk-rust"
+version = "0.1.0"
+edition = "2021"
+description = "SDK for interacting with Faxmon API"
+authors = ["Faxmon Team"]
+repository = "https://github.com/faxmon/faxmon-sdk-rust"
+license = "MIT"
+keywords = ["monitoring", "api-client", "sdk"]
+categories = ["api-bindings"]
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+url = "2.3"
+thiserror = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
